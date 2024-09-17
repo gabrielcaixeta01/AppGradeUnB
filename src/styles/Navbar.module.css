@@ -1,0 +1,33 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    padding: 2px 25px 2px 25px;
+    margin-left: 150px;
+    margin-right: 100px;
+    width: 100%;
+  }
+  
+  .navItem {
+   margin-left: 80px;
+   margin-right: 80px;
+    } 
+  
+  .navLink {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navLink:hover {
+    color: #ccc; 
+  }
