@@ -1,24 +1,29 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from '../Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  limparGrade: () => void;
+  salvarGrade: () => void;
+}
+
+
+const Navbar: React.FC<NavbarProps> = ({ limparGrade, salvarGrade }) => {
   return (
     <nav className={styles.navbar}>
-      <ul className={styles.navbarMenu}>
-        <li className={styles.navbarMenuItem}>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
+      <ul>
+        <li>
+          <button id='limpar' className={styles.navButton} onClick={limparGrade}>
+            LIMPAR GRADE
+          </button>
         </li>
-        <li className={styles.navbarMenuItem}>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+        <li>
+          <button id='salvar' className={styles.navButton} onClick={salvarGrade}>
+            SALVAR
+          </button>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

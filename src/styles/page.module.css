@@ -1,8 +1,188 @@
-.container {
+.gradeContainer {
+    width: 100%; /* Preenche toda a largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+    border-radius: 8px; 
+    background-color: white; /* Fundo branco */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    padding: 20px 0; /* Espaçamento em volta */
+}
+
+table.grade {
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    table-layout: fixed;
+    margin: 0 auto; /* Centraliza a tabela */
+}
+
+table.grade th, table.grade td {
+    border: 1px solid #123163;
+    padding: 15px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+table.grade th {
+    background-color: #123163;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    padding: 20px 10px;
+}
+
+/* Estilo padrão para células */
+table.grade td {
+    background-color: #f9f9f9; /* Cor de fundo clara para contraste */
+    color: #333;
+}
+
+/* Estilo para células interativas */
+table.grade td.cell {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #123163;
+    border-radius: 8px; /* Reduzi o border-radius para um visual mais sutil */
+}
+
+/* Efeito hover para células interativas */
+table.grade td.cell:hover {
+    background-color: #e0e0e0;
+    color: #123163;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gradeContainer {
+        width: 100%; /* Ajusta a largura para telas menores */
+        margin: 20px 0;
+    }
+
+    table.grade th, table.grade td {
+        font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
+        padding: 10px;
+    }
+}
+
+/* Estilizando os cartões das matérias */
+.materiaList {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.materiaCard {
+    background-color: #123163;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: grab;
+    user-select: none;
+    width: 250px;
+    height: auto;
+}
+
+.materiaCard h3 {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.materiaCard ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
+    padding: 0;
+}
+
+.materiaCard li {
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Estilo para o horário arrastável */
+.horarioItem {
+    padding: 5px;
+    background-color: #f0f0f0;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.horarioItem:hover {
+    background-color: #e0e0e0;
+}
+
+/* Tooltip do professor com delay */
+.professorHover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background-color: #fff;
+    color: #123163;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, transition-delay 0.5s;
+    transform: translateY(10px);
+}
+
+.horarioItem:hover .professorHover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s; /* Adiciona um pequeno delay no hover */
+}
+
+/* Estilos para a Navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza os itens da navbar */
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    
+    background-color: #123163;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none; /* Remove marcadores da lista */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 50px; /* Espaçamento entre os botões */
+}
+
+.navButton {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navButton:hover {
+    background-color: #009739;
+    color: white;
 }
