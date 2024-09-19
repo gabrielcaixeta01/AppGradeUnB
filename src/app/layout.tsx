@@ -5,8 +5,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
-  title: "Base Site",
-  description: "Start your site with a solid foundation.",
+  title: "Grade UnB",
+  description: "Monte sua grade de horários da UnB",
 };
 
 export default function RootLayout({

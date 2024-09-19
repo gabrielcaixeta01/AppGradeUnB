@@ -1,13 +1,35 @@
-.gradeContainer {
-    width: 100%; /* Preenche toda a largura */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
-    border-radius: 8px; 
-    background-color: white; /* Fundo branco */
+.container {
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.gradeContainer {
+    width: 70%; /* Preenche toda a largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+    background-color: white; /* Fundo branco */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: auto; /* Ajusta a altura conforme o conteúdo */
-    padding: 20px 0; /* Espaçamento em volta */
+    padding: 20px 10px 60px; /* Espaçamento em volta */
+    margin-top: 150px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 150px 0 0 0;
+}
+
+.gradeContainer p {
+    font-family: 'Montserrat', sans-serif;
+    color: #123163;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
 }
 
 table.grade {
@@ -70,28 +92,42 @@ table.grade td.cell:hover {
     }
 }
 
-/* Estilizando os cartões das matérias */
 .materiaList {
     display: flex;
+    width: 90%;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 20px 0px 60px;
     margin-top: 20px;
+    margin-bottom: 200px;
     justify-content: center;
+    background-color: #123163;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte para destacar */
 }
 
+/* Cards das matérias */
 .materiaCard {
+    background-color: #123163; /* Fundo mais consistente com a paleta de cores */
     color: white;
     padding: 20px;
     border-radius: 15px;
     cursor: grab;
     user-select: none;
-    width: 250px;
+    width: 200px;
     height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona animação suave */
+}
+
+.materiaCard:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
 .materiaCard h3 {
     margin-top: 0;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Aumenta o tamanho do título ligeiramente */
+    text-align: center;
 }
 
 .materiaCard ul {
@@ -99,6 +135,7 @@ table.grade td.cell:hover {
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin: 0;
 }
 
 .materiaCard li {
@@ -108,17 +145,18 @@ table.grade td.cell:hover {
 
 /* Estilo para o horário arrastável */
 .horarioItem {
-    padding: 5px;
+    padding: 10px; /* Aumenta o padding para melhorar a legibilidade */
     background-color: #f0f0f0;
     color: black;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .horarioItem:hover {
     background-color: #e0e0e0;
+    transform: scale(1.05); /* Ligeiramente aumenta o item ao passar o mouse */
 }
 
 /* Tooltip do professor com delay */
@@ -126,22 +164,23 @@ table.grade td.cell:hover {
     visibility: hidden;
     position: absolute;
     bottom: -20px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Centraliza o tooltip e ajusta a posição inicial */
     background-color: #fff;
     color: #123163;
     padding: 5px;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
+    z-index: 2;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, transition-delay 0.5s;
-    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, transition-delay 0.5s;
 }
 
 .horarioItem:hover .professorHover {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0); /* Suave transição para aparecer o tooltip */
     transition-delay: 0.6s; /* Adiciona um pequeno delay no hover */
 }
 
