@@ -61,7 +61,7 @@ const materias: Materia[] = [
   {
     nome: 'Sistemas Digitais',
     horarios: [
-      { codigo: '246T34', professor: 'Professor E' }
+      { codigo: '246M12', professor: 'Professor E' }
     ],
     cor: '#e74c3c'  // Cor vermelha para Sistemas Digitais
   },
@@ -131,6 +131,13 @@ const HomePage: React.FC = () => {
     }
   };
 
+  const handleCellClick = (materia: string) => {
+    const newGrade = grade.map((row) =>
+      row.map((cell) => (cell.materia === materia ? {} : cell))
+    );
+    setGrade(newGrade);
+  };
+
   // Decodifica o código para retornar os dias e horários (linhas e colunas) correspondentes
   const decodeCodigo = (codigo: string) => {
     const regex = /(\d+)([MTN])(\d+)/; // Ex: 24M12 ou 35T34
@@ -192,14 +199,15 @@ const HomePage: React.FC = () => {
                   <td>{horario}</td>
                   {grade[rowIndex].map((cell: Cell, colIndex: number) => (
                     <td
-                      key={colIndex}
-                      className={styles.cell}
-                      onDragOver={handleDragOver}
-                      onDrop={handleDrop}
-                      style={{ backgroundColor: cell?.cor || '#f9f9f9', color: cell?.cor ? 'white' : '#333' }}  // Aplica a cor da matéria
-                    >
-                      {cell?.materia || ''}  {/* Exibe o nome da matéria */}
-                    </td>
+                    key={colIndex}
+                    className={styles.cell}
+                    onDragOver={handleDragOver}
+                    onDrop={handleDrop}
+                    onClick={() => handleCellClick(cell.materia || '')}  // Remove todas as células da matéria
+                    style={{ backgroundColor: cell?.cor || '#f9f9f9', color: cell?.cor ? 'white' : '#333' }}
+                  >
+                    {cell?.materia || ''}  {/* Exibe o nome da matéria */}
+                  </td>
                   ))}
                 </tr>
               )
