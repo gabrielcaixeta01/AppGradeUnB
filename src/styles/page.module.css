@@ -95,6 +95,8 @@ table.grade td.cell:hover {
 .materiaList {
     display: flex;
     width: 90%;
+    min-width: 400px;
+    min-height: 250px;
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px 0px 60px;
@@ -223,4 +225,43 @@ table.grade td.cell:hover {
 .navButton:hover {
     background-color: #009739;
     color: white;
+}
+
+.formContainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: fit-content;
+  }
+  
+  .formContainer h2 {
+    margin-bottom: 10px;
+  }
+  
+  .formContainer input {
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+  }
+  
+.button {
+    background-color: #123163;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+.button:hover {
+    background-color: #0d254f;
+  }
+
+.formAndMateria {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 20px;
 }

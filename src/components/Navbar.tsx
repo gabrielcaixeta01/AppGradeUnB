@@ -6,7 +6,6 @@ interface NavbarProps {
   salvarGrade: () => void;
 }
 
-
 const Navbar: React.FC<NavbarProps> = ({ limparGrade, salvarGrade }) => {
   return (
     <nav className={styles.navbar}>
@@ -24,6 +23,6 @@ const Navbar: React.FC<NavbarProps> = ({ limparGrade, salvarGrade }) => {
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
