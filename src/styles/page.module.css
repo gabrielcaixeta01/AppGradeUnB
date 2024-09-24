@@ -94,41 +94,40 @@ table.grade td.cell:hover {
 
 .materiaList {
     display: flex;
-    width: 90%;
-    min-width: 400px;
+    width: auto; /* Usa 100% para maximizar o espaço disponível */
+    min-width: 350px; /* Diminui a largura mínima */
     min-height: 250px;
-    gap: 20px;
+    gap: 10px; /* Reduz o espaço entre os cards */
     flex-wrap: wrap;
-    padding: 20px 0px 60px;
+    padding: 20px 20px;
     margin-top: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 150px; /* Reduz a margem inferior */
     justify-content: center;
     background-color: #123163;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte para destacar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Cards das matérias */
 .materiaCard {
-    background-color: #123163; /* Fundo mais consistente com a paleta de cores */
+    background-color: #123163;
     color: white;
-    padding: 20px;
+    padding: 15px; /* Diminui o padding */
     border-radius: 15px;
     cursor: grab;
     user-select: none;
-    width: 200px;
+    width: 180px; /* Diminui a largura dos cards */
     height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona animação suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .materiaCard:hover {
-    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .materiaCard h3 {
     margin-top: 0;
-    font-size: 0.95rem; /* Aumenta o tamanho do título ligeiramente */
+    font-size: 0.9rem; /* Reduz um pouco o tamanho do título */
     text-align: center;
 }
 
@@ -141,7 +140,7 @@ table.grade td.cell:hover {
 }
 
 .materiaCard li {
-    margin: 10px 0;
+    margin: 8px 0; /* Reduz o espaço entre os horários */
     position: relative;
 }
 
@@ -225,43 +224,4 @@ table.grade td.cell:hover {
 .navButton:hover {
     background-color: #009739;
     color: white;
-}
-
-.formContainer {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    height: fit-content;
-  }
-  
-  .formContainer h2 {
-    margin-bottom: 10px;
-  }
-  
-  .formContainer input {
-    margin: 10px 0;
-    padding: 5px;
-    width: 100%;
-  }
-  
-.button {
-    background-color: #123163;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-.button:hover {
-    background-color: #0d254f;
-  }
-
-.formAndMateria {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    gap: 20px;
 }
