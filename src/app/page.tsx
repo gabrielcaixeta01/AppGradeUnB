@@ -32,58 +32,45 @@ const diasMapping: { [key: string]: number } = {
 
 const materiasPreDefinidas: Materia[] = [
   {
-    nome: 'Cálculo 3',
-    sigla: 'C3',
+    nome: 'Linguagens de Programação',
+    sigla: 'LP',
     horarios: [
-      { codigo: '235M34', professor: 'Claus Akira Matsushigue' },
-      { codigo: '356M12', professor: 'Mateus Figueiredo de Souza' },
-      { codigo: '356M12', professor: 'Nathalia Nogueira Goncalves' },
-      { codigo: '235M34', professor: 'Julia Aredes de Almeida' },
-      { codigo: '246T23', professor: 'Pedro Roitman' },
-      { codigo: '356M12', professor: 'Victor Petrogradskyi' },
-      { codigo: '2N12 35N34', professor: 'Ricardo Parreira da Silva' },
+      { codigo: '24M12', professor: 'Vander Ramos Alves' },
+      { codigo: '46N12', professor: 'Marcelo Ladeira' },
+      { codigo: '24M34', professor: 'Vander Ramos Alves' }
     ],
     cor: '#f39c12'
   },
   {
-    nome: 'Técnicas de Programação 1',
-    sigla: 'TP1',
+    nome: 'Organização e Arquitetura de Computadores',
+    sigla: 'OAC',
     horarios: [
-      { codigo: '35N34', professor: 'Fernando Antonio de Araujo Chacon de Albuquerque' },
-      { codigo: '35M34', professor: 'Fernando Antonio de Araujo Chacon de Albuquerque' },
-      { codigo: '35M34', professor: 'Roberta Barbosa Oliveira' }
+      { codigo: '24T23', professor: 'Marcus Vinicius Lamar' },
+      { codigo: '35T23', professor: 'Ricardo Pezzuol Jacobi' },
+      { codigo: '35M34', professor: 'Flavio de Barros Vidal' },
+      { codigo: '24N12', professor: 'Carla Maria Chagas e Cavalcante Koike' }
     ],
     cor: '#2980b9'
   },
   {
-    nome: 'Introdução aos Circuitos Elétricos',
-    sigla: 'ICE',
+    nome: 'Cálculo Numérico',
+    sigla: 'CN',
     horarios: [
-      { codigo: '6M12', professor: 'Joao Paulo Leite' },
-      { codigo: '6M34', professor: 'Joao Paulo Leite' },
-      { codigo: '4T23', professor: 'Daniel Orquiza de Carvalho' },
-      { codigo: '3M12', professor: 'Daniel Orquiza de Carvalho' }
+      { codigo: '24M34', professor: 'A definir docente' },
+      { codigo: '35T45', professor: 'Flavia Ferreira Ramos Zapata' },
+      { codigo: '35T23', professor: 'Flavia Ferreira Ramos Zapata' },
+      { codigo: '24M12', professor: 'Raderson Rodrigues da Silva' },
+      { codigo: '35T23', professor: 'Carlos Maber Carrion Riveros' }
     ],
     cor: '#8e44ad'
-  },
-  {
-    nome: 'Sinais e Sistemas em Tempo Contínuo',
-    sigla: 'SSTC',
-    horarios: [
-      { codigo: '24M34', professor: 'Robson Domingos Vieira' },
-      { codigo: '35M34', professor: 'Lelio Ribeiro Soares Junior' },
-      { codigo: '35T23', professor: 'Flavia Maria Guerra de Sousa Aranha Oliveira' },
-      { codigo: '24T45', professor: 'Joao Luiz Azevedo de Carvalho' }
-    ],
-    cor: '#27ae60'
   },
   {
     nome: 'Sistemas Digitais',
     sigla: 'SD',
     horarios: [
       { codigo: '35T45', professor: 'Edson Mitsu Hung' },
-      { codigo: '24M34', professor: 'Guilherme de Sousa Torres' },
-      { codigo: '24T45', professor: 'Daniel Chaves Cafe' }
+      { codigo: '24M34', professor: 'A definir docente' },
+      { codigo: '24T45', professor: 'Joao Luiz Azevedo de Carvalho' }
     ],
     cor: '#e74c3c'
   },
@@ -93,21 +80,34 @@ const materiasPreDefinidas: Materia[] = [
     horarios: [
       { codigo: '2M34', professor: 'Luis Fernando Ramos Molinaro' },
       { codigo: '2T23', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '3T45', professor: 'Guilherme de Sousa Torres' },
-      { codigo: '4T45', professor: 'Guilherme de Sousa Torres' },
+      { codigo: '3T45', professor: 'Jose Edil Guimaraes de Medeiros' },
       { codigo: '6M12', professor: 'Luis Fernando Ramos Molinaro' },
       { codigo: '6M34', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '3T23', professor: 'Guilherme de Sousa Torres' }
+      { codigo: '3T23', professor: 'Jose Edil Guimaraes de Medeiros' },
+      { codigo: '6T45', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' },
+      { codigo: '6T23', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' }
     ],
     cor: '#16a085'
   },
   {
-    nome: 'Vigilância Epidemiológica Participativa',
-    sigla: 'VEP',
+    nome: 'Eletromagnetismo 1',
+    sigla: 'EM1',
     horarios: [
-      { codigo: '2M5 2T1', professor: 'Ligia Maria Cantarino Da Costa' }
+      { codigo: '35T45', professor: 'Adoniran Judson de Barros Braga' },
+      { codigo: '46M34', professor: 'Achiles Fontana da Mota' }
     ],
     cor: '#34495e'
+  },
+  {
+    nome: 'Sinais e Sistemas em Tempo Discreto',
+    sigla: 'SSTD',
+    horarios: [
+      { codigo: '35M12', professor: 'Hugo Tadashi Muniz Kussaba' },
+      { codigo: '24T23', professor: 'Francisco Assis de Oliveira Nascimento' },
+      { codigo: '35M34', professor: 'Eduardo Peixoto Fernandes da Silva' },
+      { codigo: '35T6 35N1', professor: 'Robson Domingos Vieira' }
+    ],
+    cor: '#27ae60'
   }
 ];
 
