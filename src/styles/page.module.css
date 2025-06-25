@@ -1,227 +1,229 @@
 .container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  gap: 10px;
+}
+
+.containerGradeMateria {
+    max-width: 50%;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 5px;
+    margin: 30px 0 50px 0;
 }
 
 .gradeContainer {
-    width: 70%; /* Preenche toda a largura */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
-    background-color: white; /* Fundo branco */
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto; /* Ajusta a altura conforme o conteúdo */
-    padding: 20px 10px 60px; /* Espaçamento em volta */
-    margin-top: 150px;
-    border: 1px solid white;
-    border-radius: 15px;
-    margin: 150px 0 0 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 60px;
 }
 
 .gradeContainer p {
-    font-family: 'Montserrat', sans-serif;
-    color: #123163;
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    font-style: italic;
-    padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #123163;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
 }
 
 table.grade {
-    width: 90%;
-    border-collapse: collapse;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    table-layout: fixed;
-    margin: 0 auto; /* Centraliza a tabela */
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  table-layout: fixed;
+  font-size: 12px;
+  text-align: center;
 }
 
 table.grade th, table.grade td {
-    border: 1px solid #123163;
-    padding: 15px;
-    font-size: 16px;
-    word-wrap: break-word;
+  border: 1px solid #123163;
+  padding: 3px;
+  height: 28px;
+  max-width: 100px;
+  word-wrap: break-word;
 }
 
 table.grade th {
-    background-color: #123163;
-    border: 1px solid black;
-    color: white;
-    font-weight: bold;
-    padding: 20px 10px;
+  background-color: #123163;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 8px 6px;
 }
 
-/* Estilo padrão para células */
 table.grade td {
-    background-color: #f9f9f9; /* Cor de fundo clara para contraste */
-    color: #333;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* Estilo para células interativas */
 table.grade td.cell {
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    border: 1px solid #123163;
-    border-radius: 8px; /* Reduzi o border-radius para um visual mais sutil */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #123163;
 }
 
-/* Efeito hover para células interativas */
 table.grade td.cell:hover {
-    background-color: #e0e0e0;
-    color: #123163;
+  background-color: #e0e0e0;
+  color: #123163;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .gradeContainer {
-        width: 100%; /* Ajusta a largura para telas menores */
-        margin: 20px 0;
-    }
+  .gradeContainer {
+    width: 95%;
+    margin: 14px auto;
+    padding: 16px;
+  }
 
-    table.grade th, table.grade td {
-        font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
-        padding: 10px;
-    }
+  table.grade th, table.grade td {
+    font-size: 10px;
+    padding: 6px;
+  }
 }
 
 .materiaList {
-    display: flex;
-    width: auto; /* Usa 100% para maximizar o espaço disponível */
-    min-width: 350px; /* Diminui a largura mínima */
-    min-height: 250px;
-    gap: 10px; /* Reduz o espaço entre os cards */
-    flex-wrap: wrap;
-    padding: 20px 20px;
-    margin-top: 20px;
-    margin-bottom: 150px; /* Reduz a margem inferior */
-    justify-content: center;
-    background-color: #123163;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 7px;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #123163;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .materiaCard {
-    background-color: #123163;
-    color: white;
-    padding: 15px; /* Diminui o padding */
-    border-radius: 15px;
-    cursor: grab;
-    user-select: none;
-    width: 180px; /* Diminui a largura dos cards */
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  width: 140px;
+  min-height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .materiaCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .materiaCard h3 {
-    margin-top: 0;
-    font-size: 0.9rem; /* Reduz um pouco o tamanho do título */
-    text-align: center;
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .materiaCard ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
 }
 
 .materiaCard li {
-    margin: 8px 0; /* Reduz o espaço entre os horários */
-    position: relative;
+  position: relative;
+  width: 100%;
+  padding: 3px 5px;
 }
 
-/* Estilo para o horário arrastável */
 .horarioItem {
-    padding: 10px; /* Aumenta o padding para melhorar a legibilidade */
-    background-color: #f0f0f0;
-    color: black;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .horarioItem:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05); /* Ligeiramente aumenta o item ao passar o mouse */
+  background-color: #e0e0e0;
+  transform: scale(1.03);
 }
 
-/* Tooltip do professor com delay */
 .professorHover {
-    visibility: hidden;
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Centraliza o tooltip e ajusta a posição inicial */
-    background-color: #fff;
-    color: #123163;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 0.65rem;
-    z-index: 2;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, transition-delay 0.5s;
+  visibility: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #fff;
+  color: #123163;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  z-index: 10;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, transition-delay 0.5s;
 }
 
 .horarioItem:hover .professorHover {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0); /* Suave transição para aparecer o tooltip */
-    transition-delay: 0.6s; /* Adiciona um pequeno delay no hover */
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  transition-delay: 0.6s;
 }
 
-/* Estilos para a Navbar */
 .navbar {
-    display: flex;
-    justify-content: center; /* Centraliza os itens da navbar */
-    align-items: center;
-    background-color: #123163;
-    padding: 10px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #123163;
+  padding: 10px;
+  width: 100%;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none; /* Remove marcadores da lista */
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-    margin: 0 50px; /* Espaçamento entre os botões */
+  margin: 0 30px;
 }
 
 .navButton {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    display: inline-block;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .navButton:hover {
-    background-color: #009739;
-    color: white;
+  background-color: #009739;
+  color: white;
 }
