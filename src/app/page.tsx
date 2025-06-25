@@ -42,72 +42,57 @@ const materiasPreDefinidas: Materia[] = [
     cor: '#f39c12'
   },
   {
+    nome: 'Engenharia de Software',
+    sigla: 'ES',
+    horarios: [
+      { codigo: '24N34', professor: 'Fernando Antonio de Araujo Chacon de Albuquerque' },
+      { codigo: '35M12', professor: 'Genaina Nunes Rodrigues' }
+    ],
+    cor: '#d35400'
+  },
+  {
     nome: 'Organização e Arquitetura de Computadores',
     sigla: 'OAC',
     horarios: [
-      { codigo: '24T23', professor: 'Marcus Vinicius Lamar' },
-      { codigo: '35T23', professor: 'Ricardo Pezzuol Jacobi' },
       { codigo: '35M34', professor: 'Flavio de Barros Vidal' },
       { codigo: '24N12', professor: 'Carla Maria Chagas e Cavalcante Koike' }
     ],
     cor: '#2980b9'
   },
   {
-    nome: 'Cálculo Numérico',
-    sigla: 'CN',
+    nome: 'Teleinformática e Redes 1',
+    sigla: 'TR1',
     horarios: [
-      { codigo: '24M34', professor: 'A definir docente' },
-      { codigo: '35T45', professor: 'Flavia Ferreira Ramos Zapata' },
-      { codigo: '35T23', professor: 'Flavia Ferreira Ramos Zapata' },
-      { codigo: '24M12', professor: 'Raderson Rodrigues da Silva' },
-      { codigo: '35T23', professor: 'Carlos Maber Carrion Riveros' }
+      { codigo: '35M12', professor: 'Marcelo Antonio Marotta' }
     ],
-    cor: '#8e44ad'
-  },
-  {
-    nome: 'Sistemas Digitais',
-    sigla: 'SD',
-    horarios: [
-      { codigo: '35T45', professor: 'Edson Mitsu Hung' },
-      { codigo: '24M34', professor: 'A definir docente' },
-      { codigo: '24T45', professor: 'Joao Luiz Azevedo de Carvalho' }
-    ],
-    cor: '#e74c3c'
-  },
-  {
-    nome: 'Laboratório de Sistemas Digitais',
-    sigla: 'LSD',
-    horarios: [
-      { codigo: '2M34', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '2T23', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '3T45', professor: 'Jose Edil Guimaraes de Medeiros' },
-      { codigo: '6M12', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '6M34', professor: 'Luis Fernando Ramos Molinaro' },
-      { codigo: '3T23', professor: 'Jose Edil Guimaraes de Medeiros' },
-      { codigo: '6T45', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' },
-      { codigo: '6T23', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' }
-    ],
-    cor: '#16a085'
+    cor: '#7f8c8d'
   },
   {
     nome: 'Eletromagnetismo 1',
     sigla: 'EM1',
     horarios: [
-      { codigo: '35T45', professor: 'Adoniran Judson de Barros Braga' },
       { codigo: '46M34', professor: 'Achiles Fontana da Mota' }
     ],
     cor: '#34495e'
   },
   {
-    nome: 'Sinais e Sistemas em Tempo Discreto',
-    sigla: 'SSTD',
+    nome: 'Sistemas Microprocessados',
+    sigla: 'SM',
     horarios: [
-      { codigo: '35M12', professor: 'Hugo Tadashi Muniz Kussaba' },
-      { codigo: '24T23', professor: 'Francisco Assis de Oliveira Nascimento' },
-      { codigo: '35M34', professor: 'Eduardo Peixoto Fernandes da Silva' },
-      { codigo: '35T6 35N1', professor: 'Robson Domingos Vieira' }
+      { codigo: '24M12', professor: 'Daniel Chaves Cafe' },
+      { codigo: '35M34', professor: 'Daniel Chaves Cafe' }
     ],
-    cor: '#27ae60'
+    cor: '#9b59b6'
+  },
+  {
+    nome: 'Laboratório de Sistemas Microprocessados',
+    sigla: 'LSM',
+    horarios: [
+      { codigo: '3M34', professor: 'Jose Edil Guimaraes de Medeiros' },
+      { codigo: '4M34', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' },
+      { codigo: '2M12', professor: 'Eduardo Bezerra Rufino Ferreira Paiva' }
+    ],
+    cor: '#16a085'
   }
 ];
 
