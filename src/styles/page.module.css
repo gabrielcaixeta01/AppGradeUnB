@@ -9,11 +9,10 @@
 
 .containerGradeMateria {
     max-width: 50%;
-    justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 5px;
+    padding: 35px;
     margin: 30px 0 50px 0;
 }
 
@@ -25,7 +24,8 @@
   align-items: center;
   padding: 24px;
   border-radius: 12px;
-  margin-top: 60px;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .gradeContainer p {
@@ -34,7 +34,7 @@
   font-size: 1.4rem;
   font-weight: 600;
   text-align: center;
-  padding: 16px;
+  padding: 5px;
 }
 
 table.grade {
@@ -50,8 +50,8 @@ table.grade th, table.grade td {
   border: 1px solid #123163;
   padding: 3px;
   height: 28px;
-  max-width: 100px;
   word-wrap: break-word;
+
 }
 
 table.grade th {
@@ -78,26 +78,16 @@ table.grade td.cell:hover {
   color: #123163;
 }
 
-@media (max-width: 768px) {
-  .gradeContainer {
-    width: 95%;
-    margin: 14px auto;
-    padding: 16px;
-  }
 
-  table.grade th, table.grade td {
-    font-size: 10px;
-    padding: 6px;
-  }
-}
 
 .materiaList {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: left;
   gap: 7px;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 24px;
+  margin: 20px 0 0 0;
   background-color: #123163;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -186,44 +176,4 @@ table.grade td.cell:hover {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
   transition-delay: 0.6s;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #123163;
-  padding: 10px;
-  width: 100%;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  margin: 0 30px;
-}
-
-.navButton {
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 24px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.navButton:hover {
-  background-color: #009739;
-  color: white;
 }

@@ -1,39 +1,39 @@
 .navbar {
-    display: flex;
-    justify-content: center; /* Centraliza os itens da navbar */
-    align-items: center; /* Alinha verticalmente */
-    background-color: #123163;
-    padding: 10px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #123163;
+  padding: 8px 0;
+  width: 100%;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none; /* Remove marcadores da lista */
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-    margin: 0 50px; /* Espaçamento entre os botões */
+  margin: 0 16px;
 }
 
 .navButton {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
 }
 
 .navButton:hover {
-    background-color: #009739;
-    color: white;
+  background-color: #007ed3;
+  color: white;
 }
